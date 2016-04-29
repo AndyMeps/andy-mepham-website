@@ -1,0 +1,34 @@
+{
+  "name": "andy-mepham-website",
+  "description": "My Website - built with Node",
+  "main": "",
+  "authors": [
+    "Andrew Mepham <andrew.mepham@parenta.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^2.2.3",
+    "skeleton": "^2.0.4",
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18"
+  },
+  "overrides": {
+    "skeleton": {
+      "main": [
+        "css/normalize.css",
+        "css/skeleton.css"
+      ]
+    }
+  }
+}

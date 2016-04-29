@@ -1,8 +1,7 @@
 .header {
-    padding-top: 2.5em;
+    padding-top: 2.5rem;
     text-align: center;
-    padding-bottom: 2.5em;
-    background-color: #f8f8f8;
+    padding-bottom: 2.5rem;
     
     > h2 {
         margin: 0;
@@ -10,6 +9,7 @@
 }
 
 .navbar {
+    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     
     > ul {
@@ -21,7 +21,7 @@
             margin: 0;
             
             > a {
-                margin-right: 35px;
+                margin-right: 3.3rem;
                 color: #333;
                 text-transform: uppercase;
                 text-decoration: none;
@@ -39,8 +39,8 @@
 }
 
 .page-title {
-    margin-top: 1em;
-    margin-bottom: 1em;    
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
     
     > h1, h2, h3, h4, h5, h6 {
         margin: 0;
@@ -48,6 +48,6 @@
 }
 
 .hero {
-    margin: 1em;
+    margin: 1rem;
     font-size: 2em;
 }

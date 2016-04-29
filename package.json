@@ -9,7 +9,10 @@
     "grunt-contrib-coffee": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-wiredep": "^3.0.1"
+    "grunt-wiredep": "^3.0.1",
+    "morgan": "^1.7.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }

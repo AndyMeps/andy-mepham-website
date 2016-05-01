@@ -7,16 +7,18 @@ module.exports = function(grunt) {
 	
 	grunt.initConfig({
 		coffee: {
-			compile: {
-				expand: true,
-				flatten: true,
-				src: ['resources/coffee/app.coffee', 'resources/coffee/app.routes.coffee'],
-				dest: 'public/app/',
-				ext: '.js'
-			}	
+			"all": {
+				files: {
+					'public/app/app.js': [
+						'resources/coffee/app.coffee', 
+						'resources/coffee/app.routes.coffee', 
+						'resources/coffee/app.run.coffee'
+					]
+				}	
+			}
 		},
 		sass: {
-			dist: {
+			"all": {
 				files: {					
 					'public/css/main.css': 'resources/sass/main.scss'
 				}
@@ -31,6 +33,13 @@ module.exports = function(grunt) {
 			"css": {
 				files: ['resources/sass/main.scss'],
 				tasks: ['sass'],
+				options: {
+					spawn: false
+				}
+			},
+			"coffee": {
+				files: ['resources/coffee/**/*'],
+				tasks: ['coffee'],
 				options: {
 					spawn: false
 				}

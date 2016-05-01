@@ -1,3 +1,24 @@
+$light-color: #eee;
+$dark-color: #333;
+$highlight-color: #c06c84;
+
+@-ms-viewport{
+  width: device-width;
+}
+
+a {
+    color: $dark-color;
+    &:hover {
+        color: $highlight-color;
+    }
+}
+
+#ngProgress {
+    color: $dark-color !important;
+    box-shadow: none !important;
+    background-color: $dark-color !important;
+}
+
 .header {
     padding-top: 2.5rem;
     text-align: center;
@@ -9,8 +30,8 @@
 }
 
 .navbar {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid $light-color;
+    border-bottom: 1px solid $light-color;
     
     > ul {
         list-style: none;
@@ -22,17 +43,12 @@
             
             > a {
                 margin-right: 3.3rem;
-                color: #333;
                 text-transform: uppercase;
                 text-decoration: none;
                 font-weight: 600;
                 font-size: 11px;
                 letter-spacing: .2rem;
                 line-height: 6.5rem;                
-                
-                &:hover {
-                    color: #c06c84;
-                }
             }
         }
     }
@@ -50,4 +66,20 @@
 .hero {
     margin: 1rem;
     font-size: 2em;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.social-media 
+{
+    > a {
+        font-size: 2rem;
+        padding: .25rem;
+    }
 }

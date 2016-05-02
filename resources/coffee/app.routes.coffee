@@ -17,6 +17,14 @@ config = ($stateProvider, $urlRouterProvider) ->
                 templateUrl: 'app/partials/about.html'
             }
         )
+        .state(
+            'cv',
+            {
+                url: '/cv',
+                templateUrl: 'app/partials/cv.html'
+            }
+        )
+        
 angular
     .module 'app'
     .config config

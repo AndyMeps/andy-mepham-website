@@ -15,6 +15,68 @@ a {
 
 /* Helpers */
 
+@media print {
+    .social-media {
+        text-align: center !important;
+    }
+    .social-label {
+        display: inline-block !important;
+        position: relative !important;
+        bottom: 3px !important;
+    }
+    i:after {
+        font-style: normal;
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 2px;
+        margin-left: 2px;
+    }
+    .curriculum-vitae-page {
+        .page-title {
+            display: none;
+        }
+        .social-label {
+            display: inline-block !important;
+        }
+    }
+    .navbar {
+        display: none;
+    }
+}
+
+@media (min-width: 550px) {
+    .tr-d {
+        text-align: right;
+    }
+    
+    .tl-d {
+        text-align: left;
+    }
+}
+
+@media (max-width: 549px) {
+    .tr-m {
+        text-align: right;
+    }
+    
+    .tl-m {
+        text-align: left;
+    }
+}
+
+.social-media {
+    text-align: right;
+}
+
+.social-label {
+    display: none;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 2px;
+    padding-left: 3px;
+    margin-right: 5px;
+}
+
 .text-right {
     text-align: right;
 }
@@ -36,7 +98,6 @@ a {
 .header {
     padding-top: 2.5rem;
     text-align: center;
-    padding-bottom: 2.5rem;
     
     > h2 {
         margin: 0;
@@ -82,13 +143,13 @@ a {
     > a {
         font-size: 2rem;
         padding: .25rem;
+        text-decoration: none;
     }
 }
 
 /* /cv */
 .curriculum-vitae-page {
     .cv-section {
-        border-top: 1px dotted $dark-color;
         padding-top: 2rem;
         
         h5 {
@@ -100,7 +161,8 @@ a {
         
         p {
             font-size: 1.2rem;
-            line-height: 1.4rem;
+            line-height: 1.5rem;
+            margin-top: .3rem;
         }
     }
 }

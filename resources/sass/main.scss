@@ -7,162 +7,174 @@ $highlight-color: #c06c84;
 }
 
 a {
-    color: $dark-color;
-    &:hover {
-        color: $highlight-color;
-    }
+  color: $dark-color;
+  
+  &:hover {
+    color: $highlight-color;
+  }
 }
 
-/* Helpers */
+// Helpers
 
 @media print {
-    .social-media {
-        text-align: center !important;
+  // scss-lint:disable ImportantRule
+  .social-media {
+    text-align: center !important;
+  }
+  
+  // scss-lint:disable ImportantRule
+  .social-label {
+    bottom: 3px !important;
+    display: inline-block !important;
+    position: relative !important;
+  }
+
+  i:after {
+    bottom: 2px;
+    font-size: 1.2rem;
+    font-style: normal;
+    margin-left: 2px;
+    position: relative;
+  }
+  
+  .curriculum-vitae-page {
+    
+    .page-title {
+      display: none;
     }
+    
+    // scss-lint:disable ImportantRule
     .social-label {
-        display: inline-block !important;
-        position: relative !important;
-        bottom: 3px !important;
+      display: inline-block !important;
     }
-    i:after {
-        font-style: normal;
-        font-size: 1.2rem;
-        position: relative;
-        bottom: 2px;
-        margin-left: 2px;
-    }
-    .curriculum-vitae-page {
-        .page-title {
-            display: none;
-        }
-        .social-label {
-            display: inline-block !important;
-        }
-    }
-    .navbar {
-        display: none;
-    }
+  }
+  
+  .navbar {
+    display: none;
+  }
 }
 
 @media (min-width: 550px) {
-    .tr-d {
-        text-align: right;
-    }
-    
-    .tl-d {
-        text-align: left;
-    }
+  .tr-d {
+    text-align: right;
+  }
+  
+  .tl-d {
+    text-align: left;
+  }
 }
 
 @media (max-width: 549px) {
-    .tr-m {
-        text-align: right;
-    }
-    
-    .tl-m {
-        text-align: left;
-    }
-}
-
-.social-media {
+  .tr-m {
     text-align: right;
+  }
+  
+  .tl-m {
+    text-align: left;
+  }
 }
 
 .social-label {
-    display: none;
-    font-size: 1.2rem;
-    position: relative;
-    bottom: 2px;
-    padding-left: 3px;
-    margin-right: 5px;
+  bottom: 2px;
+  display: none;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  padding-left: 3px;
+  position: relative;
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 
-/* Plugin Overrides */
-
+// Plugin Overrides
+// scss-lint:disable IdSelector, SelectorFormat, ImportantRule
 #ngProgress {
-    color: $dark-color !important;
-    box-shadow: none !important;
-    background-color: $dark-color !important;
+  background-color: $dark-color !important;
+  box-shadow: none !important;
+  color: $dark-color !important;
 }
 
-/* Header and Navbar */
+// Header and Navbar
 
 .header {
-    padding-top: 2.5rem;
-    text-align: center;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  text-align: center;
     
-    > h2 {
-        margin: 0;
-    }
+  > h2 {
+    margin: 0;
+  }
 }
 
 .navbar {
-    border-top: 1px solid $light-color;
-    border-bottom: 1px solid $light-color;
-    
-    > ul {
-        list-style: none;
-        margin: 0;
-        
-        > li {
-            display: inline-block;
-            margin: 0;
-            
-            > a {
-                margin-right: 3.3rem;
-                text-transform: uppercase;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 11px;
-                letter-spacing: .2rem;
-                line-height: 6.5rem;                
-            }
-        }
-    }
+  border-bottom: 1px solid $light-color;
+  border-top: 1px solid $light-color;
+}
+
+.navbar-inline {
+  list-style: none;
+  margin: 0;
+}
+
+.navbar-inline-item {
+  display: inline-block;
+  margin: 0;
+}
+
+.navbar-inline-link {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  line-height: 6.5rem;   
+  margin-right: 3.3rem;   
+  text-decoration: none; 
+  text-transform: uppercase; 
 }
 
 .page-title {
-    margin-top: 1rem;
-    margin-bottom: 1rem;    
+  margin-bottom: 1rem;    
+  margin-top: 1rem;
     
-    > h1, h2, h3, h4, h5, h6 {
-        margin: 0;
-    }
+  > h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6 {
+    margin: 0;
+  }
 }
 
-.social-media 
-{
-    > a {
-        font-size: 2rem;
-        padding: .25rem;
-        text-decoration: none;
-    }
+.social-media {
+  text-align: right;
+  
+  > a {
+    font-size: 2rem;
+    padding: .25rem;
+  }
 }
 
-/* /cv */
+// /cv
 .curriculum-vitae-page {
-    .cv-section {
-        padding-top: 2rem;
-        
-        h5 {
-            text-transform: uppercase;
-            font-size: 1.4rem;
-            font-weight: 500;
-            letter-spacing: .05rem;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5rem;
-            margin-top: .3rem;
-        }
+  .cv-section {
+    padding-top: 2rem;
+    
+    h5 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
     }
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-top: .3rem;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html data-ng-app="app">
     <head>
         <!-- PAGE TITLE -->
         <title>Andy Mepham</title>
@@ -40,21 +40,21 @@
                 <a href="#" title="On LinkedIn"><i class="ion-social-linkedin"></i><span class="social-label">/in/AndyMepham</span></a>
                 <a href="#" title="On Twitter"><i class="ion-social-twitter"></i><span class="social-label">@AndrewMephamIT</span></a>
                 <a href="#" title="On Pinterest"><i class="ion-social-pinterest"></i><span class="social-label">/AndyMeps</span></a>
-            </div>    
+            </div>      
             <div class="navbar">
-                <ul>
-                    <li>
-                        <a ui-sref="home">Home</a>
+                <ul class="navbar-inline">
+                    <li class="navbar-inline-item">
+                        <a data-ui-sref="home" class="navbar-inline-link">Home</a>
                     </li>
-                    <li>
-                        <a ui-sref="about">About</a> 
+                    <li class="navbar-inline-item">
+                        <a data-ui-sref="about" class="navbar-inline-link">About</a> 
                     </li>  
-                    <li>
-                        <a ui-sref="cv">CV</a>
+                    <li class="navbar-inline-item">
+                        <a data-ui-sref="cv" class="navbar-inline-link">CV</a>
                     </li>
                 </ul>                  
             </div>                    
-            <div class="row" ui-view></div>   
+            <div class="row" data-ui-view></div>   
         </div>
     </body>
 </html>

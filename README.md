@@ -25,7 +25,7 @@ All frameworks, languages and libraries used in this project are listed below:
 | Name | Url | Description | Usage |
 | --- | --- | --- | --- |
 | Sass | [Website](http://sass-lang.com/) | CSS Preprocessor | Stylesheet Generation |
-
+| scss-lint | [On GitHub](https://github.com/brigade/scss-lint) | Linter for Sass | Required for grunt-scss-lint |
 ### Bower Components 
 
 | Name | Url | Description | Usage |
@@ -38,6 +38,8 @@ All frameworks, languages and libraries used in this project are listed below:
 
 | Name | Url | Description | Usage |
 | --- | --- | --- | --- |
+| grunt-coffeelint | [On GitHub](https://github.com/vojtajina/grunt-coffeelint) | Linter for CoffeeScript | Ensure .coffee files follow a style guide |
+| grunt-scss-lint | [On GitHub](https://github.com/ahmednuaman/grunt-scss-lint) | Linter for Sass | Ensure .scss files follow a style guide |
 | grunt-contrib-coffee | [On GitHub](https://github.com/gruntjs/grunt-contrib-coffee) | CoffeeScript => Javascript | Javascript file generation |
 | grunt-contrib-sass | [On GitHub](https://github.com/gruntjs/grunt-contrib-sass) | Sass => CSS | CSS file generation |
 | grunt-contrib-watch | [On GitHub](https://github.com/gruntjs/grunt-contrib-watch) | Monitor code for changes and run tasks | Faster development |

@@ -70,3 +70,12 @@ module.exports = (grunt) ->
         ]
         options:
           spawn: false
+
+  grunt.registerTask 'defaultWatch', [
+      'coffeelint'
+      'scsslint'
+      'sass'
+      'coffee'
+      'wiredep'
+      'watch'
+    ]

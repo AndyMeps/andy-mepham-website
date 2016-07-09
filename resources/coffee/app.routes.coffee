@@ -9,7 +9,8 @@ config = ($stateProvider, $urlRouterProvider) ->
       {
         url: '/home',
         templateUrl: 'app/partials/home.html'
-      })
+      }
+    )
     .state(
       'about',
       {

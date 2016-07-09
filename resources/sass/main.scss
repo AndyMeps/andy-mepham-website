@@ -177,6 +177,12 @@ a {
 
 // /cv
 .curriculum-vitae-page {
+
+  .ask-me-message {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  
   .cv-section {
     padding-top: 2rem;
     
@@ -191,7 +197,7 @@ a {
   .education {
     // border-left: 1px solid $highlight-color;
     box-sizing: border-box;
-    padding-left: .5rem;
+    padding-right: .5rem;
     
     + .education {
       margin-top: 1.5rem;
@@ -202,12 +208,12 @@ a {
     // border-left: 1px solid $highlight-color;
     box-sizing: border-box;
     display: inline-block;
-    padding-left: .5rem;
+    padding-right: .5rem;
     width: 49%;
   }
   
   .expertise-name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0;
   }
   

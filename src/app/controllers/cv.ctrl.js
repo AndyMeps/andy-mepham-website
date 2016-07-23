@@ -2,7 +2,21 @@
 
 class CvController {
     constructor(SkillsService) {
-        let skills = SkillsService.getSkills();
+        this.skills = SkillsService.getSkills();
+        this.skillQuery = '';
+
+        this.foundSkills = [];
+    }
+
+    lookupSkill() {
+        this.foundSkills = [];
+
+        let skill = this.skillQuery.toLowerCase();
+        for (var value of this.skills) {
+            if(value.toLowerCase().includes(skill)) {
+                this.foundSkills.push(value);
+            }
+        }
     }
 }
 

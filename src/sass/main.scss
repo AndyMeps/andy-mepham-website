@@ -17,6 +17,10 @@ a {
 // Helpers
 
 @media print {
+  .no-print {
+    display: none;
+  }
+
   // scss-lint:disable ImportantRule
   .social-media {
     text-align: center !important;
@@ -38,19 +42,10 @@ a {
   }
   
   .curriculum-vitae-page {
-    
-    .page-title {
-      display: none;
-    }
-    
     // scss-lint:disable ImportantRule
     .social-label {
       display: inline-block !important;
     }
-  }
-  
-  .navbar {
-    display: none;
   }
 }
 
@@ -105,6 +100,32 @@ a {
 
 .text-left {
   text-align: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.lbl {
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 1.4rem;
+  padding-left: 3px;
+  padding-right: 3px;
+  text-align: center;
+
+  + .lbl {
+    margin-left: 5px;
+  }
+
+  &.lbl-outline {
+    border-color: #eee;
+  }
 }
 
 // Plugin Overrides

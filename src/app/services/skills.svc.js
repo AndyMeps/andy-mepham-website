@@ -6,7 +6,7 @@ class SkillsService {
     }
 
     getSkills() {
-        return ['Testing'];
+        return ['Testing', 'test2', 'intestine', 'detestful', 'unTESTable'];
     }
 }
 

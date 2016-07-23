@@ -19,8 +19,7 @@
   "dependencies": {
     "skeleton": "^2.0.4",
     "angular": "^1.5.5",
-    "angular-ui-router": "^0.2.18",
-    "ngprogress": "^1.1.3"
+    "angular-ui-router": "^0.2.18"
   },
   "overrides": {
     "skeleton": {

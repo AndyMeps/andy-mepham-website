@@ -4,14 +4,16 @@
   "version": "0.0.1",
   "description": "My Website - built with Node",
   "devDependencies": {
-    "express": "^4.13.4",
-    "bower": "^1.7.9",
-    "gulp": "^3.9.1",
     "babel": "^6.5.2",
     "babel-cli": "^6.11.4",
     "babel-preset-es2015": "^6.9.0",
+    "bower": "^1.7.9",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-wiredep": "0.0.0"
   }
 }

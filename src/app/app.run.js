@@ -1,12 +1,9 @@
 'use strict';
 
-let run = ($rootScope, ngProgressFactory) => {
+let run = ($rootScope) => {
     $rootScope.$on(
         '$stateChangeStart', 
-        (event, toState, toParams, fromState, fromParams) => {
-            $rootScope.progressbar.start();
-            $rootScope.progressbar.complete();
-        }
+        (event, toState, toParams, fromState, fromParams) => {}
     );
 };
 

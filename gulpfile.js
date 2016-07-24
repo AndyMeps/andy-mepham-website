@@ -4,9 +4,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var wiredep = require('gulp-wiredep');
+var typings = require('gulp-typings');
 
-
-gulp.task('default', () => {
+gulp.task('transpile', () => {
     return gulp.src('src/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(babel())
@@ -23,10 +23,22 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('bower', () => {
+gulp.task('wiredep', () => {
     return gulp.src('./src/templates/**/*.html')
     .pipe(wiredep({
         ignorePath: '../../dist/'
     }))
     .pipe(gulp.dest('./dist'))
+});
+
+gulp.task('typings', () => {
+    return gulp.src('./typings.json')
+        .pipe(typings());
+});
+
+gulp.task('watch', () => {
+    gulp.watch('src/app/**/*.js', ['transpile']);
+    gulp.watch('src/templates/**/*.html', ['wiredep']);
+    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('typings.json', ['typings']);
 });

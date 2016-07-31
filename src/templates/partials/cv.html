@@ -17,11 +17,11 @@
         </div>
         <div class="nine columns">
             <div class="education-grid">
-                <div class="education" data-ng-repeat="qualification in vm.education">
-                    <h5 class="qualification">{{qualification.title}}</h5>
-                    <h6 class="establishment">{{qualification.establishment}}</h6>
-                    <p class="years-active">{{qualification.yearFrom}} - {{qualification.yearTo}}</p>
-                </div>
+                <div data-qualification
+                     data-ng-repeat="qualification in vm.education"
+                     data-row="qualification" 
+                     class="education">
+                </qualification>
             </div>
         </div>
     </div>

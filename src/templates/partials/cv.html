@@ -17,15 +17,10 @@
         </div>
         <div class="nine columns">
             <div class="education-grid">
-                <div class="education">
-                    <h5 class="qualification">BSc (Hons) Database Administration and Management</h5>
-                    <h6 class="establishment">Staffordshire University</h6>
-                    <p class="years-active">2009 - 2013</p>
-                </div>
-                <div class="education">
-                    <h5 class="qualification">BTEC National Diploma for IT Practitioners</h5>
-                    <h6 class="establishment">Canterbury College</h6>
-                    <p class="years-active">2007 - 2009</p>
+                <div class="education" data-ng-repeat="qualification in vm.education">
+                    <h5 class="qualification">{{qualification.title}}</h5>
+                    <h6 class="establishment">{{qualification.establishment}}</h6>
+                    <p class="years-active">{{qualification.yearFrom}} - {{qualification.yearTo}}</p>
                 </div>
             </div>
         </div>
@@ -36,30 +31,9 @@
         </div>
         <div class="nine columns">
             <div class="expertise-grid">
-                <div class="expertise">
-                    <h6 class="expertise-name">HTML5</h6>
-                </div>  
-                <div class="expertise">
-                    <h6 class="expertise-name">CSS3</h6>
-                </div>
-                <div class="expertise">
-                    <h6 class="expertise-name">AngularJS</h6>
-                </div>
-                <div class="expertise">
-                    <h6 class="expertise-name">Bootstrap</h6>
-                </div>
-                <div class="expertise">
-                    <h6 class="expertise-name">JavaScript</h6>
-                </div>
-                <div class="expertise">
-                    <h6 class="expertise-name">CoffeeScript</h6>
-                </div>
-                <div class="expertise">
-                    <h6 class="expertise-name">TypeScript</h6>
-                </div>
-                <div class="expertise">
-                    <h6 class="expertise-name">C#</h6>
-                </div>  
+                <div class="expertise" data-ng-repeat="skill in vm.topSkills">
+                    <h6 class="expertise-name">{{skill.title}}</h6>
+                </div> 
             </div>
         </div>
     </div>
@@ -84,7 +58,16 @@
         <div class="nine columns">
             <div class="expertise-grid">
                 <div class="expertise" data-ng-repeat="skill in vm.foundSkills">
-                    <h6 class="expertise-name">{{skill}}</h6>
+                    <h6 class="expertise-name">{{skill.title}} 
+                        <small>
+                            <span data-ng-if="skill.level == 0" title="Beginner">(B)</span>
+                            <span data-ng-if="skill.level == 1" title="Intermediate">(I)</span>
+                            <span data-ng-if="skill.level == 2" title="Advanced">(A)</span>
+                        </small>
+                    </h6>
+                </div>
+                <div class="expertise" data-ng-show="vm.foundSkills.length == 0">
+                    <h6 class="expertise-name">Sorry, nothing found!</h6>
                 </div>
             </div>
         </div>
@@ -94,7 +77,16 @@
             <h5 class="cv-section-title">Experience</h5>
         </div>
         <div class="nine columns">
-            <p></p>
+            <div class="job-grid">
+                <div class="job" data-ng-repeat="job in vm.experience">
+                    <h5>{{job.title}}</h5>
+                    <h6>{{job.company}} - {{job.location}}</h6>
+                    <p>{{job.startDate | date:vm.cfg.dateFormat}} - {{job.endDate | date:vm.cfg.dateFormat}}</p>
+                    <ul>
+                        <li data-ng-repeat="r in job.responsibilities">{{r}}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>

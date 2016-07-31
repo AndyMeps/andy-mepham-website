@@ -1,6 +1,10 @@
-'use strict';
+import routing from './app.routes';
 
-angular
-    .module('app', [
-        'ui.router'
-    ]);
+import controllers from './controllers';
+
+// eslint-disable-next-line no-undef
+angular.module('app', [
+    'ui.router',
+    controllers
+])
+    .config(routing);

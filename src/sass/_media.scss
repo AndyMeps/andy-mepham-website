@@ -1,0 +1,60 @@
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+  
+  .social-label {
+    bottom: 3px;
+    display: inline-block;
+    position: relative;
+  }
+
+  i:after {
+    bottom: 2px;
+    font-size: 1.2rem;
+    font-style: normal;
+    margin-left: 2px;
+    position: relative;
+  }
+}
+
+@media (min-width: 550px) {
+  .tr-d {
+    text-align: right;
+  }
+  
+  .tl-d {
+    text-align: left;
+  }
+  
+  .curriculum-vitae-page {
+
+    .education {
+      display: inline-block;
+      vertical-align: top;
+      width: 48%;
+
+      + .education {
+        margin-top: 0;
+      }
+    }
+    
+    .expertise {
+      width: 32%;
+    }
+  }
+}
+
+@media (max-width: 549px) {
+  .tr-m {
+    text-align: right;
+  }
+  
+  .tl-m {
+    text-align: left;
+  }
+}

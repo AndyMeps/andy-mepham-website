@@ -1,27 +1,39 @@
 'use strict';
 
-class CvController {
-    constructor(SkillsService) {
-        this.skills = SkillsService.getSkills();
-        this.skillQuery = '';
+export default class CvController {
+    constructor(CvService) {
 
+        this.skillQuery = '';
         this.foundSkills = [];
+
+        this.topSkills = CvService.getTopSkills();
+
+        this.skills = CvService.getSkills();
+
+        this.education = CvService.getEducation();
+
+        this.experience = CvService.getExperience();
+
+        this.cfg = {
+            dateFormat: 'dd MMMM yyyy'
+        };
     }
 
     lookupSkill() {
         this.foundSkills = [];
 
         let skill = this.skillQuery.toLowerCase();
-        for (var value of this.skills) {
-            if(value.toLowerCase().includes(skill)) {
-                this.foundSkills.push(value);
+        for (var s of this.skills) {
+            if(s.title.toLowerCase().includes(skill)) {
+                this.foundSkills.push(s);
             }
         }
     }
 }
 
-CvController.$inject = ['SkillsService'];
+CvController.$inject = ['CvService'];
 
+/*
 angular
     .module('app')
-    .controller('CvController', CvController);
+    .controller('CvController', CvController);*/

@@ -1,25 +1,21 @@
-'use strict';
+routing.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-let config = ($stateProvider, $urlRouterProvider) => {
+export default function routing($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider
         .state('home', 
         {
             url: '/home',
-            templateUrl: 'app/partials/home.html'
+            templateUrl: 'partials/home.html'
         })
         .state('about', {
             url: '/about',
-            templateUrl: 'app/partials/about.html'
+            templateUrl: 'partials/about.html'
         })
         .state('cv', {
             url: '/cv',
-            templateUrl: 'app/partials/cv.html',
+            templateUrl: 'partials/cv.html',
             controller: 'CvController as vm'
         });
-};
-
-angular
-    .module('app')
-    .config(config);
+}

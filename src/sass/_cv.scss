@@ -1,0 +1,61 @@
+.curriculum-vitae-page {
+
+  .ask-me-message {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .cv-section {
+    padding-top: 2rem;
+    
+    .cv-section-title {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+    }
+  }
+  
+  .education {
+    box-sizing: border-box;
+    padding-right: .5rem;
+    
+    + .education {
+      margin-top: 1.5rem;
+    }
+  }
+  
+  .expertise {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: .5rem;
+    width: 49%;
+  }
+  
+  .expertise-name {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  
+  .qualification {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+  }
+  
+  .establishment {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    margin-bottom: 0;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+  }
+  
+  .years-active {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+    margin: 0;
+  }
+}

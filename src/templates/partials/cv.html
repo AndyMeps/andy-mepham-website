@@ -1,0 +1,92 @@
+<div class="curriculum-vitae-page">
+    <div class="row page-title no-print">
+        <h4>CV</h4>
+    </div>
+    <div class="row cv-section">
+        <div class="three columns tr-d">
+            <h5 class="cv-section-title">Profile</h5>
+        </div>
+        <div class="nine columns">
+            <p class="no-margin">This section is a brief description about me, maybe a more concise version 
+                of what is detailed on the About page.</p>    
+        </div>
+    </div>
+    <div class="row cv-section">
+        <div class="three columns tr-d">
+            <h5 class="cv-section-title">Education</h5>
+        </div>
+        <div class="nine columns">
+            <div class="education-grid">
+                <div class="education" data-ng-repeat="qualification in vm.education">
+                    <h5 class="qualification">{{qualification.title}}</h5>
+                    <h6 class="establishment">{{qualification.establishment}}</h6>
+                    <p class="years-active">{{qualification.yearFrom}} - {{qualification.yearTo}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row cv-section">
+        <div class="three columns tr-d">
+            <h5 class="cv-section-title">Expertise</h5>
+        </div>
+        <div class="nine columns">
+            <div class="expertise-grid">
+                <div class="expertise" data-ng-repeat="skill in vm.topSkills">
+                    <h6 class="expertise-name">{{skill.title}}</h6>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="row cv-section no-print">
+        <div class="three columns tr-d">&nbsp;</div>
+        <div class="nine columns">
+            <div class="ask-me-container">
+                <p class="ask-me-message">I've only included my strongest skills here, looking for something in particular?</p>
+                <form class="ask-me-form">
+                    <div style="width: 70%; float: left; padding-right: 1rem; box-sizing: border-box;">
+                        <input type="text" placeholder="I.e. 'Angular' or 'SQL'" style="width: 100%;" data-ng-model="vm.skillQuery" data-ng-model-options="{debounce: 500}" data-ng-change="vm.lookupSkill()">
+                    </div>
+                    <div style="width: 30%; float: left;">
+                        <button type="button" style="display: block;width: 100%;" data-ng-click="vm.lookupSkill()" data-ng-disabled="vm.skillQuery.length == 0">Check</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row cv-section no-print" data-ng-show="vm.skillQuery.length > 0" class="ng-hide">
+        <div class="three columns tr-d">&nbsp;</div>
+        <div class="nine columns">
+            <div class="expertise-grid">
+                <div class="expertise" data-ng-repeat="skill in vm.foundSkills">
+                    <h6 class="expertise-name">{{skill.title}} 
+                        <small>
+                            <span data-ng-if="skill.level == 0" title="Beginner">(B)</span>
+                            <span data-ng-if="skill.level == 1" title="Intermediate">(I)</span>
+                            <span data-ng-if="skill.level == 2" title="Advanced">(A)</span>
+                        </small>
+                    </h6>
+                </div>
+                <div class="expertise" data-ng-show="vm.foundSkills.length == 0">
+                    <h6 class="expertise-name">Sorry, nothing found!</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row cv-section">
+        <div class="three columns tr-d">
+            <h5 class="cv-section-title">Experience</h5>
+        </div>
+        <div class="nine columns">
+            <div class="job-grid">
+                <div class="job" data-ng-repeat="job in vm.experience">
+                    <h5>{{job.title}}</h5>
+                    <h6>{{job.company}} - {{job.location}}</h6>
+                    <p>{{job.startDate | date:vm.cfg.dateFormat}} - {{job.endDate | date:vm.cfg.dateFormat}}</p>
+                    <ul>
+                        <li data-ng-repeat="r in job.responsibilities">{{r}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

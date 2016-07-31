@@ -1,0 +1,23 @@
+$light-color: #eee;
+$dark-color: #333;
+$highlight-color: #c06c84;
+
+@-ms-viewport{
+  width: device-width;
+}
+
+a {
+  color: $dark-color;
+  
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+@import 'utility';
+
+@import 'header';
+
+@import 'cv';
+
+@import 'media';

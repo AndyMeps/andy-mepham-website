@@ -1,0 +1,66 @@
+.header {
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  text-align: center;
+    
+  > h2 {
+    margin: 0;
+  }
+}
+
+.navbar {
+  border-bottom: 1px solid $light-color;
+  border-top: 1px solid $light-color;
+}
+
+.navbar-inline {
+  list-style: none;
+  margin: 0;
+}
+
+.navbar-inline-item {
+  display: inline-block;
+  margin: 0;
+}
+
+.navbar-inline-link {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  line-height: 6.5rem;   
+  margin-right: 3.3rem;   
+  text-decoration: none; 
+  text-transform: uppercase; 
+}
+
+.page-title {
+  margin-bottom: 1rem;    
+  margin-top: 1rem;
+    
+  > h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6 {
+    margin: 0;
+  }
+}
+
+.social-media {
+  text-align: right;
+  
+  > a {
+    font-size: 2rem;
+    padding: .25rem;
+  }
+}
+
+.social-label {
+  bottom: 2px;
+  display: none;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  padding-left: 3px;
+  position: relative;
+}

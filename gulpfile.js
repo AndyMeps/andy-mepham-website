@@ -41,9 +41,8 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', ['transpile', 'wiredep', 'scss'], () => {
     gulp.watch('src/app/**/*.js', ['transpile']);
     gulp.watch('src/templates/**/*.html', ['wiredep']);
     gulp.watch('src/sass/**/*.scss', ['scss']);
-    gulp.watch('typings.json', ['typings']);
 });

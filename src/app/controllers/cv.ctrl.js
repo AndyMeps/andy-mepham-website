@@ -4,6 +4,7 @@ export default class CvController {
     constructor(CvService) {
 
         this.skillQuery = '';
+        
         this.foundSkills = [];
 
         this.topSkills = CvService.getTopSkills();

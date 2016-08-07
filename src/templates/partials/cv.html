@@ -13,7 +13,7 @@
     </div>
     <div class="row cv-section">
         <div class="three columns tr-d">
-            <h5 class="cv-section-title">Education</h5>
+            <h1 class="cv-section-title">Education</h1>
         </div>
         <div class="nine columns">
             <div class="education-grid">
@@ -21,18 +21,18 @@
                      data-ng-repeat="qualification in vm.education"
                      data-row="qualification" 
                      class="education">
-                </qualification>
+                </div>
             </div>
         </div>
     </div>
     <div class="row cv-section">
         <div class="three columns tr-d">
-            <h5 class="cv-section-title">Expertise</h5>
+            <h1 class="cv-section-title">Expertise</h1>
         </div>
         <div class="nine columns">
             <div class="expertise-grid">
                 <div class="expertise" data-ng-repeat="skill in vm.topSkills">
-                    <h6 class="expertise-name">{{skill.title}}</h6>
+                    <h1 class="expertise-name">{{skill.title}}</h1>
                 </div> 
             </div>
         </div>
@@ -58,33 +58,31 @@
         <div class="nine columns">
             <div class="expertise-grid">
                 <div class="expertise" data-ng-repeat="skill in vm.foundSkills">
-                    <h6 class="expertise-name">{{skill.title}} 
+                    <h1 class="expertise-name">{{skill.title}} 
                         <small>
                             <span data-ng-if="skill.level == 0" title="Beginner">(B)</span>
                             <span data-ng-if="skill.level == 1" title="Intermediate">(I)</span>
                             <span data-ng-if="skill.level == 2" title="Advanced">(A)</span>
                         </small>
-                    </h6>
+                    </h1>
                 </div>
                 <div class="expertise" data-ng-show="vm.foundSkills.length == 0">
-                    <h6 class="expertise-name">Sorry, nothing found!</h6>
+                    <h1 class="expertise-name">Sorry, nothing found!</h1>
                 </div>
             </div>
         </div>
     </div>
     <div class="row cv-section">
         <div class="three columns tr-d">
-            <h5 class="cv-section-title">Experience</h5>
+            <h1 class="cv-section-title">Experience</h1>
         </div>
         <div class="nine columns">
             <div class="job-grid">
                 <div class="job" data-ng-repeat="job in vm.experience">
-                    <h5>{{job.title}}</h5>
-                    <h6>{{job.company}} - {{job.location}}</h6>
-                    <p>{{job.startDate | date:vm.cfg.dateFormat}} - {{job.endDate | date:vm.cfg.dateFormat}}</p>
-                    <ul>
-                        <li data-ng-repeat="r in job.responsibilities">{{r}}</li>
-                    </ul>
+                    <h1 class="job-title">{{job.title}}</h1>
+                    <h2 class="job-location">{{job.company}} - {{job.location}}</h2>
+                    <p class="job-date-range">{{job.startDate | date:vm.cfg.dateFormat}} - {{ job.endDate == null && 'Current' || job.endDate | date:vm.cfg.dateFormat}}</p>
+                    <p class="job-description">{{job.description}}</p>
                 </div>
             </div>
         </div>

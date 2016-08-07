@@ -58,9 +58,8 @@ class CvService {
 
     getExperience() {
         return [
-            new Job('Software Developer', 'Parenta Group', 'Maidstone, Kent', new Date(2015, 1, 1), new Date(), []),
-            new Job('Software Developer', 'Synectics Solutions', 'Stoke-on-Trent, Staffordshire', new Date(2013, 6, 1), new Date(2014, 12, 31), []),
-            new Job('Bar Staff', 'Staffordshire University Student\'s Union', 'Stoke-on-Trent, Staffordshire', new Date(2011, 9, 1), new Date(2013, 5, 31), [])
+            new Job('Software Developer', 'Parenta Group', 'Maidstone, Kent', new Date(2015, 0, 1), null, 'Full stack development with .NET technologies and JavaScript frameworks, occasionally filling in as DBA.'),
+            new Job('Graduate Software Developer', 'Synectics Solutions', 'Stoke-on-Trent, Staffordshire', new Date(2013, 5, 1), new Date(2014, 11, 31), 'Front end and data services development with .NET technologies, working with ASP.NET forms, Windows Services and SQL Server 2008 databases.')
         ];
     }
 }

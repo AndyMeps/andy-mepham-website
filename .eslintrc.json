@@ -23,6 +23,12 @@
         "semi": [
             "error",
             "always"
+        ],
+        "no-console": [
+            "warn"
+        ],
+        "no-debugger": [
+            "warn"
         ]
     }
 }

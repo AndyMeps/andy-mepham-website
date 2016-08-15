@@ -9,11 +9,17 @@ export default class CvController {
 
         this.topSkills = CvService.getTopSkills();
 
-        this.skills = CvService.getSkills();
+        CvService.getSkills().then((data) => {
+            this.skills = data;
+        });
 
-        this.education = CvService.getEducation();
+        CvService.getEducation().then((data) => {
+            this.education = data;
+        });
 
-        this.experience = CvService.getExperience();
+        CvService.getExperience().then((data) => {
+            this.experience = data;
+        });
 
         this.cfg = {
             dateFormat: 'dd MMMM yyyy'
@@ -33,8 +39,3 @@ export default class CvController {
 }
 
 CvController.$inject = ['CvService'];
-
-/*
-angular
-    .module('app')
-    .controller('CvController', CvController);*/
